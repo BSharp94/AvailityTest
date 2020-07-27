@@ -1,10 +1,8 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer'
-import VisibilityTracker from './../visibility-tracker'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
-function Question7({updateNavigation}) {
+function Question7() {
 
     let sqlAnswer1 = `SELECT 
     c.FirstName,
@@ -46,9 +44,7 @@ HAVING SUM(ol.cost) > 100 AND SUM(ol.cost) < 500
 `
 
     return (
-      <VisibilityTracker onVisible = {(visible) => updateNavigation("question7", visible)}>
-
-        <section id = "question7">
+        <section id = "question7" className = "question__panel">
           <h2>Question 7</h2>
 
           <i><b>This database diagram is to be used for the questions that follow:</b></i>
@@ -87,7 +83,6 @@ HAVING SUM(ol.cost) > 100 AND SUM(ol.cost) < 500
                 { sqlAnswer3 }
             </SyntaxHighlighter>
         </section>
-      </VisibilityTracker>
 
     )
 }

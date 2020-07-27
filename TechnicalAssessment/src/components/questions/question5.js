@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
-import { useInView } from 'react-intersection-observer'
-import VisibilityTracker from './../visibility-tracker'
 
 
-function Question5({updateNavigation}) {
+function Question5() {
 
     return (
-      <VisibilityTracker onVisible = {(visible) => updateNavigation("question3", visible)}>
 
-        <section id = "question5">
+        <section id = "question5" className = "question__panel">
           <h2>Question 5</h2>
 
           <i><b>Coding exercise (using Angular or a Javascript framework of your choice): Healthcare providers request
@@ -25,8 +22,6 @@ electronically join Availity. The following data points should be collected:</b>
             <RegistrationForm />
           
         </section>
-      </VisibilityTracker>
-
     )
 }
 

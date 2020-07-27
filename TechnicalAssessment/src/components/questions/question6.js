@@ -1,11 +1,9 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer'
-import VisibilityTracker from './../visibility-tracker'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 
-function Question6({updateNavigation}) {
+function Question6() {
 
   let fileLocation = "{project_directory}/CSharpCode/question6/Program.cs"
 
@@ -138,9 +136,7 @@ function Question6({updateNavigation}) {
 4,Jeff Smith Older,1,Company 3`
 
     return (
-      <VisibilityTracker onVisible = {(visible) => updateNavigation("question6", visible)}>
-
-        <section id = "question6">
+        <section id = "question6" className = "question__panel">
           <h2>Question 6</h2>
 
           <i><b>Coding exercise (using C#): Availity receives enrollment files from various benefits management and enrollment
@@ -157,7 +153,7 @@ the record with the highest version should be included. The following data point
             </ul>
           
             <p>Ive added the code below. You can also the actual file in the following location:
-                <a href = "#">
+                <a href = "https://github.com/BSharp94/AvailityTest/blob/master/CSharpCode/question6/Program.cs">
                     {fileLocation}
                 </a>    
             </p>
@@ -174,7 +170,6 @@ the record with the highest version should be included. The following data point
                 { testFile }
             </SyntaxHighlighter>
         </section>
-      </VisibilityTracker>
 
     )
 }

@@ -1,10 +1,8 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer'
-import VisibilityTracker from './../visibility-tracker'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
-function Question4({updateNavigation}) {
+function Question4() {
 
     let fileLocation = "{project_directory}/CSharpCode/question4/Program.cs"
 
@@ -66,9 +64,7 @@ namespace question4
 
 
     return (
-      <VisibilityTracker onVisible = {(visible) => updateNavigation("question3", visible)}>
-
-        <section id = "question3" className = "question__panel">
+        <section id = "question4" className = "question__panel">
             <h2>Question 4</h2>
 
 
@@ -77,7 +73,7 @@ namespace question4
     properly closed and nested.</b></i>
 
             <p>Ive added the code below. You can also the actual file in the following location:
-                <a href = "#">
+                <a href = "https://github.com/BSharp94/AvailityTest/blob/master/CSharpCode/question4/Program.cs">
                     {fileLocation}
                 </a>    
             </p>
@@ -87,8 +83,6 @@ namespace question4
                 { codeSolution }
             </SyntaxHighlighter>
         </section>
-      </VisibilityTracker>
-
     )
 }
 

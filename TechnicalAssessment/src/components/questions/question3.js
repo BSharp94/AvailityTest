@@ -1,12 +1,10 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import VisibilityTracker from './../visibility-tracker'
 
 
-function Question3({updateNavigation}) {
+function Question3() {
 
     return (
-      <VisibilityTracker onVisible = {(visible) => updateNavigation("question3", visible)}>
 
         <section id = "question3" className = "question__panel">
           <h2>Question 3</h2>
@@ -25,7 +23,6 @@ function Question3({updateNavigation}) {
 
 
         </section>
-      </VisibilityTracker>
 
     )
 }
