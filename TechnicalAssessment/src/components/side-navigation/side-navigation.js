@@ -41,7 +41,6 @@ class SideNavigation extends React.Component {
     render() {
         return (
             <nav className = "side-navigation__panel">
-                <img  src={ require("./../../images/logo.jpeg")} style = {{ "width": "70%", "height": "auto", "margin": "20px"}}/>
                 <ul className = "side-navigation__top-list">
                     { pageStructureToContent(this.state.pageStructure) }
                 </ul>

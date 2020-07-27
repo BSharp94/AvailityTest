@@ -49,8 +49,6 @@ HAVING SUM(ol.cost) > 100 AND SUM(ol.cost) < 500
 
           <i><b>This database diagram is to be used for the questions that follow:</b></i>
             
-          <img  src={ require("./../../images/dbtables.png")} style = {{ "width": "500px", "height": "auto", "margin": "3rem"}}/>
-
 
             <section id = "question7a">
                 <p>
